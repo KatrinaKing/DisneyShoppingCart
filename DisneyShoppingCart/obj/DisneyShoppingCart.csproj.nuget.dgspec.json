@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kingkat/Desktop/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart.csproj": {}
+    "/Users/kingkat/Desktop/CompProg/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart.csproj": {}
   },
   "projects": {
-    "/Users/kingkat/Desktop/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart.csproj": {
+    "/Users/kingkat/Desktop/CompProg/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kingkat/Desktop/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart.csproj",
+        "projectUniqueName": "/Users/kingkat/Desktop/CompProg/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart.csproj",
         "projectName": "DisneyShoppingCart",
-        "projectPath": "/Users/kingkat/Desktop/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart.csproj",
+        "projectPath": "/Users/kingkat/Desktop/CompProg/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart.csproj",
         "packagesPath": "/Users/kingkat/.nuget/packages/",
-        "outputPath": "/Users/kingkat/Desktop/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/obj/",
+        "outputPath": "/Users/kingkat/Desktop/CompProg/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/kingkat/.config/NuGet/NuGet.Config"

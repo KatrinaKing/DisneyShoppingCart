@@ -10,3 +10,15 @@
 /Users/kingkat/Desktop/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/obj/Debug/netcoreapp3.1/DisneyShoppingCart.dll
 /Users/kingkat/Desktop/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/obj/Debug/netcoreapp3.1/DisneyShoppingCart.pdb
 /Users/kingkat/Desktop/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/obj/Debug/netcoreapp3.1/DisneyShoppingCart.genruntimeconfig.cache
+/Users/kingkat/Desktop/CompProg/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/bin/Debug/netcoreapp3.1/DisneyShoppingCart.deps.json
+/Users/kingkat/Desktop/CompProg/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/bin/Debug/netcoreapp3.1/DisneyShoppingCart.runtimeconfig.json
+/Users/kingkat/Desktop/CompProg/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/bin/Debug/netcoreapp3.1/DisneyShoppingCart.runtimeconfig.dev.json
+/Users/kingkat/Desktop/CompProg/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/bin/Debug/netcoreapp3.1/DisneyShoppingCart.dll
+/Users/kingkat/Desktop/CompProg/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/bin/Debug/netcoreapp3.1/DisneyShoppingCart.pdb
+/Users/kingkat/Desktop/CompProg/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/obj/Debug/netcoreapp3.1/DisneyShoppingCart.csprojAssemblyReference.cache
+/Users/kingkat/Desktop/CompProg/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/obj/Debug/netcoreapp3.1/DisneyShoppingCart.AssemblyInfoInputs.cache
+/Users/kingkat/Desktop/CompProg/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/obj/Debug/netcoreapp3.1/DisneyShoppingCart.AssemblyInfo.cs
+/Users/kingkat/Desktop/CompProg/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/obj/Debug/netcoreapp3.1/DisneyShoppingCart.csproj.CoreCompileInputs.cache
+/Users/kingkat/Desktop/CompProg/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/obj/Debug/netcoreapp3.1/DisneyShoppingCart.dll
+/Users/kingkat/Desktop/CompProg/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/obj/Debug/netcoreapp3.1/DisneyShoppingCart.pdb
+/Users/kingkat/Desktop/CompProg/DisneyShoppingCart/DisneyShoppingCart/DisneyShoppingCart/obj/Debug/netcoreapp3.1/DisneyShoppingCart.genruntimeconfig.cache
