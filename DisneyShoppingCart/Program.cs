@@ -1,4 +1,6 @@
 ﻿using System;
+using DisneyShoppingCart.Models;
+using DisneyShoppingCart.DTOS;
 
 namespace DisneyShoppingCart
 {
@@ -15,69 +17,18 @@ namespace DisneyShoppingCart
         {
             Users usersObject = new Users("SunnyDLight", "YouAreNotTheWay");
 
-            string stringFormat = "My influencer name is {0} and my regular user name is {1}.";
+            string stringFormat = "My influencer name is {0} and my regular username is {1}.";
 
             Console.WriteLine(String.Format(stringFormat, usersObject.privateUserName, usersObject.publicUserName));
-        }
-    }
 
-    public class Users
-    {
-        public string privateUserName { get; set; }
-        public string publicUserName { get; set; }
+            UsersDTO newDTOUser = new UsersDTO();
+            newDTOUser.privateUserName = "BobEsponja";
+            newDTOUser.publicUserName = "LipBalm";
 
-        public Users(string newPrivateUserName, string newPublicUserName)
-        {
-            this.privateUserName = newPrivateUserName;
-            this.publicUserName = newPublicUserName;
-        }
-    }
+            String newstringFormat = "My new influencer name is {0} and my new reg username is {1}.";
 
-    public class Roles
-    {
-        public string influencer { get; set; }
-        public string regUser { get; set; }
+            Console.WriteLine(String.Format(newstringFormat, newDTOUser.privateUserName, newDTOUser.publicUserName));
 
-        public Roles(string newPrivateUserName, string newPublicUserName)
-        {
-            this.influencer = newPrivateUserName;
-            this.regUser = newPublicUserName;
-        }
-    }
-
-    public class Images
-    {
-        public string publicImages { get; set; }
-        public string privateImages { get; set; }
-
-        public Images(string newPrivateUserName, string newPublicUserName)
-        {
-            this.publicImages = newPrivateUserName;
-            this.privateImages = newPublicUserName;
-        }
-    }
-
-    public class Posts
-    {
-        public string privatePosts { get; set; }
-        public string publicPosts { get; set; }
-
-        public Posts(string newPrivateUserName, string newPublicUserName)
-        {
-            this.privatePosts = newPrivateUserName;
-            this.publicPosts = newPublicUserName;
-        }
-    }
-
-    public class Comments
-    {
-        public string privateComments { get; set; }
-        public string publicComments { get; set; }
-
-        public Comments(string newPrivateUserName, string newPublicUserName)
-        {
-            this.privateComments = newPrivateUserName;
-            this.publicComments = newPublicUserName;
         }
     }
 }
