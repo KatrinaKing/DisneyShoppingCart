@@ -7,13 +7,17 @@ namespace DisneyShoppingCart
         static void Main(string[] args)
         {
 
+            Program.MyMethod();
+           
+        }
 
+        static void MyMethod()
+        {
             Users usersObject = new Users("SunnyDLight", "YouAreNotTheWay");
 
             string stringFormat = "My influencer name is {0} and my regular user name is {1}.";
 
             Console.WriteLine(String.Format(stringFormat, usersObject.privateUserName, usersObject.publicUserName));
-           
         }
     }
 
