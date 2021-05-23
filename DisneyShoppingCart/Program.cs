@@ -31,7 +31,7 @@ namespace DisneyShoppingCart
 
 
 
-            DateTime myDateTimeVariable1 = new DateTime(2004,10,04);
+            /*DateTime myDateTimeVariable1 = new DateTime(2004,10,04);
             DateTime myDateTimeVariable2 = new DateTime(1987,01,16);
 
 
@@ -42,6 +42,19 @@ namespace DisneyShoppingCart
              else
             {
                 Console.WriteLine("No, it is greater!");
+            }*/
+
+
+            int loopVal;
+            int end_value = 21;
+            int addition = 0;
+
+            for (loopVal = 1; loopVal < end_value; loopVal++)
+            {
+                addition = addition + loopVal;
+            }
+            {
+                Console.WriteLine("Total = " + addition);
             }
         }
     }
