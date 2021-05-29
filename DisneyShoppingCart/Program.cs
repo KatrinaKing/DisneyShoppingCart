@@ -20,131 +20,138 @@ namespace DisneyShoppingCart
         static void MyMethod()
         {
 
-            try
-            {
-                List<Users> myList = new List<Users>();
+            //try
+            //{
+            //    List<Users> myList = new List<Users>();
 
-                Users firstUser = new Users();
-                firstUser.UserID = 10;
-                firstUser.UserName = "P3nnyw1s3";
-                firstUser.UserType = "Public";
-                firstUser.UserHobby ="scary Movies";
-                firstUser.UserState = "Washington";
+            //    Users firstUser = new Users();
+            //    firstUser.UserID = 10;
+            //    firstUser.UserName = "P3nnyw1s3";
+            //    firstUser.UserType = "Public";
+            //    firstUser.UserHobby ="scary Movies";
+            //    firstUser.UserState = "Washington";
 
-                myList.Add(firstUser);
+            //    myList.Add(firstUser);
 
-                Users secondUser = new Users();
-                secondUser.UserID = 9;
-                secondUser.UserName = "Sakura";
-                secondUser.UserType = "Private";
-                secondUser.UserHobby = "Anime";
-                secondUser.UserState = "Maine";
+            //    Users secondUser = new Users();
+            //    secondUser.UserID = 9;
+            //    secondUser.UserName = "Sakura";
+            //    secondUser.UserType = "Private";
+            //    secondUser.UserHobby = "Anime";
+            //    secondUser.UserState = "Maine";
 
-                myList.Add(secondUser);
+            //    myList.Add(secondUser);
 
-                Users thirdUser = new Users();
-                thirdUser.UserID = 8;
-                thirdUser.UserName = "Sunl3ss";
-                thirdUser.UserType = "Private";
-                thirdUser.UserHobby = "Gardening";
-                thirdUser.UserState = "California";
+            //    Users thirdUser = new Users();
+            //    thirdUser.UserID = 8;
+            //    thirdUser.UserName = "Sunl3ss";
+            //    thirdUser.UserType = "Private";
+            //    thirdUser.UserHobby = "Gardening";
+            //    thirdUser.UserState = "California";
 
-                myList.Add(thirdUser);
+            //    myList.Add(thirdUser);
 
-                Users fourthUser = new Users();
-                fourthUser.UserID = 7;
-                fourthUser.UserName = "Glu3d2U";
-                fourthUser.UserType = "Public";
-                fourthUser.UserHobby = "Crafts";
-                fourthUser.UserState = "Virginia";
+            //    Users fourthUser = new Users();
+            //    fourthUser.UserID = 7;
+            //    fourthUser.UserName = "Glu3d2U";
+            //    fourthUser.UserType = "Public";
+            //    fourthUser.UserHobby = "Crafts";
+            //    fourthUser.UserState = "Virginia";
 
-                myList.Add(fourthUser);
+            //    myList.Add(fourthUser);
 
-                Users fifthUser = new Users();
-                fifthUser.UserID = 6;
-                fifthUser.UserName = "B0bBu1ld3r";
-                fifthUser.UserType = "Private";
-                fifthUser.UserHobby = "Carpentry";
-                fifthUser.UserState = "Arizona";
+            //    Users fifthUser = new Users();
+            //    fifthUser.UserID = 6;
+            //    fifthUser.UserName = "B0bBu1ld3r";
+            //    fifthUser.UserType = "Private";
+            //    fifthUser.UserHobby = "Carpentry";
+            //    fifthUser.UserState = "Arizona";
 
-                myList.Add(fifthUser);
+            //    myList.Add(fifthUser);
 
-                Users sixthUser = new Users();
-                sixthUser.UserID = 5;
-                sixthUser.UserName = "B00t13$";
-                sixthUser.UserType = "Public";
-                sixthUser.UserHobby = "Hiking";
-                sixthUser.UserState = "Texas";
+            //    Users sixthUser = new Users();
+            //    sixthUser.UserID = 5;
+            //    sixthUser.UserName = "B00t13$";
+            //    sixthUser.UserType = "Public";
+            //    sixthUser.UserHobby = "Hiking";
+            //    sixthUser.UserState = "Texas";
 
-                myList.Add(sixthUser);
+            //    myList.Add(sixthUser);
 
-                Users seventhUser = new Users();
-                seventhUser.UserID = 4;
-                seventhUser.UserName = "P1c@$$0";
-                seventhUser.UserType = "Public";
-                seventhUser.UserHobby = "Painting";
-                seventhUser.UserState = "Florida";
+            //    Users seventhUser = new Users();
+            //    seventhUser.UserID = 4;
+            //    seventhUser.UserName = "P1c@$$0";
+            //    seventhUser.UserType = "Public";
+            //    seventhUser.UserHobby = "Painting";
+            //    seventhUser.UserState = "Florida";
 
-                myList.Add(seventhUser);
+            //    myList.Add(seventhUser);
 
-                Users eighthUser = new Users();
-                eighthUser.UserID = 3;
-                eighthUser.UserName = "Th0u$@ndl1ve$";
-                eighthUser.UserType = "Private";
-                eighthUser.UserHobby = "Reading";
-                eighthUser.UserState = "Georgia";
+            //    Users eighthUser = new Users();
+            //    eighthUser.UserID = 3;
+            //    eighthUser.UserName = "Th0u$@ndl1ve$";
+            //    eighthUser.UserType = "Private";
+            //    eighthUser.UserHobby = "Reading";
+            //    eighthUser.UserState = "Georgia";
 
-                myList.Add(eighthUser);
+            //    myList.Add(eighthUser);
 
-                Users ninthUser = new Users();
-                ninthUser.UserID = 2;
-                ninthUser.UserName = "foosb@ll3r";
-                ninthUser.UserType = "Public";
-                ninthUser.UserHobby = "Football";
-                ninthUser.UserState = "New York";
+            //    Users ninthUser = new Users();
+            //    ninthUser.UserID = 2;
+            //    ninthUser.UserName = "foosb@ll3r";
+            //    ninthUser.UserType = "Public";
+            //    ninthUser.UserHobby = "Football";
+            //    ninthUser.UserState = "New York";
 
-                myList.Add(ninthUser);
+            //    myList.Add(ninthUser);
 
-                Users tenthUser = new Users();
-                tenthUser.UserID = 1;
-                tenthUser.UserName = "SkadrGrl";
-                tenthUser.UserType = "Private";
-                tenthUser.UserHobby = "Skateboards";
-                tenthUser.UserState = "Oregon";
+            //    Users tenthUser = new Users();
+            //    tenthUser.UserID = 1;
+            //    tenthUser.UserName = "SkadrGrl";
+            //    tenthUser.UserType = "Private";
+            //    tenthUser.UserHobby = "Skateboards";
+            //    tenthUser.UserState = "Oregon";
 
-                myList.Add(tenthUser);
-
-
-                List<Users> result = myList.Where(users => users.UserID == 1).ToList();
-
-                if(result.Count == 0)
-                {
-                    throw new UserNotFound("This user does not exist in this list of users");
-                }
-                else
-                {
-                    foreach (var users in result)
-                    {
-                        Console.WriteLine(users.UserID);
-                        Console.WriteLine(users.UserName);
-                        Console.WriteLine(users.UserType);
-                        Console.WriteLine(users.UserHobby);
-                        Console.WriteLine(users.UserState);
-                    }
-                }
-            }
-
-            catch (UserNotFound exception)
-            {
-                Console.WriteLine(exception.Message);
-            }
-            finally
-            {
-
-            }
+            //    myList.Add(tenthUser);
 
 
+            //    List<Users> result = myList.Where(users => users.UserID == 1).ToList();
 
+            //    if(result.Count == 0)
+            //    {
+            //        throw new UserNotFound("This user does not exist in this list of users");
+            //    }
+            //    else
+            //    {
+            //        foreach (var users in result)
+            //        {
+            //            Console.WriteLine(users.UserID);
+            //            Console.WriteLine(users.UserName);
+            //            Console.WriteLine(users.UserType);
+            //            Console.WriteLine(users.UserHobby);
+            //            Console.WriteLine(users.UserState);
+            //        }
+            //    }
+            //}
+
+            //catch (UserNotFound exception)
+            //{
+            //    Console.WriteLine(exception.Message);
+            //}
+            //finally
+            //{
+
+            //}
+
+
+            NewClass<string,bool,int> myNewClass = new NewClass<string,bool,int>();
+            myNewClass.GenericProperty = "My generic string";
+            myNewClass.GenericProperty2 = true;
+            myNewClass.GenericProperty3 = 100204;
+
+            Console.WriteLine(myNewClass.GenericProperty);
+            Console.WriteLine(myNewClass.GenericProperty2);
+            Console.WriteLine(myNewClass.GenericProperty3);
 
 
 
@@ -217,10 +224,18 @@ namespace DisneyShoppingCart
     }
 }
 
-public class UserNotFound : Exception
-{
-    public UserNotFound(string errorMessage) : base(errorMessage)
-    {
+//public class UserNotFound : Exception
+//{
+//    public UserNotFound(string errorMessage) : base(errorMessage)
+//    {
 
-    }
+//    }
+//}
+
+
+public class NewClass<T, K, B>
+{
+    public T GenericProperty { get; set; }
+    public K GenericProperty2 { get; set; }
+    public B GenericProperty3 { get; set; }
 }
