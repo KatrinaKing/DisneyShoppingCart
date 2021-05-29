@@ -20,131 +20,132 @@ namespace DisneyShoppingCart
         static void MyMethod()
         {
 
-            try
-            {
-                List<Users> userList = new List<Users>();
+            //try
+            //{
+            //    List<Users> userList = new List<Users>();
 
-                Users firstUser = new Users();
-                firstUser.UserID = 10;
-                firstUser.UserName = "P3nnyw1s3";
-                firstUser.Email = "P3nnyw1s3@anywhere.com";
-                firstUser.Password = "P@$$w0rd10";
-
-
-                userList.Add(firstUser);
-
-                Users secondUser = new Users();
-                secondUser.UserID = 9;
-                secondUser.UserName = "Sakura";
-                secondUser.Email = "Sakura@anywhere.com";
-                secondUser.Password = "P@$$w0rd9";
+            //    Users firstUser = new Users();
+            //    firstUser.UserID = 10;
+            //    firstUser.UserName = "P3nnyw1s3";
+            //    firstUser.Email = "P3nnyw1s3@anywhere.com";
+            //    firstUser.Password = "P@$$w0rd10";
 
 
-                userList.Add(secondUser);
+            //    userList.Add(firstUser);
 
-                Users thirdUser = new Users();
-                thirdUser.UserID = 8;
-                thirdUser.UserName = "Sunl3ss";
-                thirdUser.Email = "Sunl3ss@anywhere.com";
-                thirdUser.Password = "P@$$w0rd8";
-
-                userList.Add(thirdUser);
-
-                Users fourthUser = new Users();
-                fourthUser.UserID = 7;
-                fourthUser.UserName = "Glu3d2U";
-                fourthUser.Email = "Glu3d2U@anywhere.com";
-                fourthUser.Password = "P@$$w0rd7";
-
-                userList.Add(fourthUser);
-
-                Users fifthUser = new Users();
-                fifthUser.UserID = 6;
-                fifthUser.UserName = "B0bBu1ld3r";
-                fifthUser.Email = "B0bBu1ld3r@anywhere.com";
-                fifthUser.Password = "P@$$w0rd6";
-
-                userList.Add(fifthUser);
-
-                Users sixthUser = new Users();
-                sixthUser.UserID = 5;
-                sixthUser.UserName = "B00t13$";
-                sixthUser.Email = "B00t13$@anywhere.com";
-                sixthUser.Password = "P@$$w0rd5";
+            //    Users secondUser = new Users();
+            //    secondUser.UserID = 9;
+            //    secondUser.UserName = "Sakura";
+            //    secondUser.Email = "Sakura@anywhere.com";
+            //    secondUser.Password = "P@$$w0rd9";
 
 
-                userList.Add(sixthUser);
+            //    userList.Add(secondUser);
 
-                Users seventhUser = new Users();
-                seventhUser.UserID = 4;
-                seventhUser.UserName = "P1c@$$0";
-                seventhUser.Email = "P1c@$$0@anywhere.com";
-                seventhUser.Password = "P@$$w0rd4";
+            //    Users thirdUser = new Users();
+            //    thirdUser.UserID = 8;
+            //    thirdUser.UserName = "Sunl3ss";
+            //    thirdUser.Email = "Sunl3ss@anywhere.com";
+            //    thirdUser.Password = "P@$$w0rd8";
 
-                userList.Add(seventhUser);
+            //    userList.Add(thirdUser);
 
-                Users eighthUser = new Users();
-                eighthUser.UserID = 3;
-                eighthUser.UserName = "Th0u$@ndl1ve$";
-                eighthUser.Email = "Th0u$@ndl1ve$@anywhere.com";
-                eighthUser.Password = "P@$$w0rd3";
+            //    Users fourthUser = new Users();
+            //    fourthUser.UserID = 7;
+            //    fourthUser.UserName = "Glu3d2U";
+            //    fourthUser.Email = "Glu3d2U@anywhere.com";
+            //    fourthUser.Password = "P@$$w0rd7";
 
-                userList.Add(eighthUser);
+            //    userList.Add(fourthUser);
 
-                Users ninthUser = new Users();
-                ninthUser.UserID = 2;
-                ninthUser.UserName = "foosb@ll3r";
-                ninthUser.Email = "foosb@ll3r@anywhere.com";
-                ninthUser.Password = "P@$$w0rd2";
+            //    Users fifthUser = new Users();
+            //    fifthUser.UserID = 6;
+            //    fifthUser.UserName = "B0bBu1ld3r";
+            //    fifthUser.Email = "B0bBu1ld3r@anywhere.com";
+            //    fifthUser.Password = "P@$$w0rd6";
 
-                userList.Add(ninthUser);
+            //    userList.Add(fifthUser);
 
-                Users tenthUser = new Users();
-                tenthUser.UserID = 1;
-                tenthUser.UserName = "SkadrGrl";
-                tenthUser.Email = "SkadrGrl@anywhere.com";
-                tenthUser.Password = "P@$$w0rd1";
-
-                userList.Add(tenthUser);
+            //    Users sixthUser = new Users();
+            //    sixthUser.UserID = 5;
+            //    sixthUser.UserName = "B00t13$";
+            //    sixthUser.Email = "B00t13$@anywhere.com";
+            //    sixthUser.Password = "P@$$w0rd5";
 
 
-                List<Users> result = userList.Where(users => users.UserID == 1).ToList();
+            //    userList.Add(sixthUser);
 
-                if (result.Count == 0)
-                {
-                    throw new UserNotFound("This user does not exist in this list of users");
-                }
-                else
-                {
-                    foreach (var users in result)
-                    {
-                        Console.WriteLine(users.UserID);
-                        Console.WriteLine(users.UserName);
-                        Console.WriteLine(users.Email);
-                        Console.WriteLine(users.Password);
-                        
-                    }
-                }
-            }
+            //    Users seventhUser = new Users();
+            //    seventhUser.UserID = 4;
+            //    seventhUser.UserName = "P1c@$$0";
+            //    seventhUser.Email = "P1c@$$0@anywhere.com";
+            //    seventhUser.Password = "P@$$w0rd4";
 
-            catch (UserNotFound exception)
-            {
-                Console.WriteLine(exception.Message);
-            }
-            finally
-            {
+            //    userList.Add(seventhUser);
 
-            }
+            //    Users eighthUser = new Users();
+            //    eighthUser.UserID = 3;
+            //    eighthUser.UserName = "Th0u$@ndl1ve$";
+            //    eighthUser.Email = "Th0u$@ndl1ve$@anywhere.com";
+            //    eighthUser.Password = "P@$$w0rd3";
+
+            //    userList.Add(eighthUser);
+
+            //    Users ninthUser = new Users();
+            //    ninthUser.UserID = 2;
+            //    ninthUser.UserName = "foosb@ll3r";
+            //    ninthUser.Email = "foosb@ll3r@anywhere.com";
+            //    ninthUser.Password = "P@$$w0rd2";
+
+            //    userList.Add(ninthUser);
+
+            //    Users tenthUser = new Users();
+            //    tenthUser.UserID = 1;
+            //    tenthUser.UserName = "SkadrGrl";
+            //    tenthUser.Email = "SkadrGrl@anywhere.com";
+            //    tenthUser.Password = "P@$$w0rd1";
+
+            //    userList.Add(tenthUser);
 
 
-            //NewClass<string,bool,int> myNewClass = new NewClass<string,bool,int>();
-            //myNewClass.GenericProperty = "My generic string";
-            //myNewClass.GenericProperty2 = true;
-            //myNewClass.GenericProperty3 = 100204;
+            //    List<Users> result = userList.Where(users => users.UserID == 1).ToList();
 
-            //Console.WriteLine(myNewClass.GenericProperty);
-            //Console.WriteLine(myNewClass.GenericProperty2);
-            //Console.WriteLine(myNewClass.GenericProperty3);
+            //    if (result.Count == 0)
+            //    {
+            //        throw new UserNotFound("This user does not exist in this list of users");
+            //    }
+            //    else
+            //    {
+            //        foreach (var users in result)
+            //        {
+            //            Console.WriteLine(users.UserID);
+            //            Console.WriteLine(users.UserName);
+            //            Console.WriteLine(users.Email);
+            //            Console.WriteLine(users.Password);
+
+
+
+            NewClass<string, bool, int> myNewClass = new NewClass<string, bool, int>();
+            myNewClass.GenericProperty = "My generic string";
+            myNewClass.GenericProperty2 = true;
+            myNewClass.GenericProperty3 = 100204;
+
+            Console.WriteLine(myNewClass.GenericProperty);
+            Console.WriteLine(myNewClass.GenericProperty2);
+            Console.WriteLine(myNewClass.GenericProperty3);
+        }
+    }
+}
+
+//catch (UserNotFound exception)
+//{
+//    Console.WriteLine(exception.Message);
+//}
+//finally
+//{
+
+//}
+
 
 
 
@@ -213,22 +214,22 @@ namespace DisneyShoppingCart
             //{
             //    Console.Write(item + ",");
             //}
+            //        }
+            //    }
+            //}
+
+            //public class UserNotFound : Exception
+            //{
+            //    public UserNotFound(string errorMessage) : base(errorMessage)
+            //    {
+
+            //    }
+            //}
+
+
+        public class NewClass<T, K, B>
+        {
+            public T GenericProperty { get; set; }
+            public K GenericProperty2 { get; set; }
+            public B GenericProperty3 { get; set; }
         }
-    }
-}
-
-public class UserNotFound : Exception
-{
-    public UserNotFound(string errorMessage) : base(errorMessage)
-    {
-
-    }
-}
-
-
-//public class NewClass<T, K, B>
-//{
-//    public T GenericProperty { get; set; }
-//    public K GenericProperty2 { get; set; }
-//    public B GenericProperty3 { get; set; }
-//}
