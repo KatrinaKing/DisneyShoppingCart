@@ -19,233 +19,67 @@ namespace DisneyShoppingCart
 
         static void MyMethod()
         {
+            string response = "";
+            List<Users> userlist = new List<Users>();
+            List<Comments> commentList = new List<Comments>();
 
-            //try
-            //{
-            //    List<Users> userList = new List<Users>();
+            while (response!="5")
+            {
+                Console.WriteLine("1. Create a User");
+                Console.WriteLine("2. Create a Comment");
+                Console.WriteLine("3. Print the List of Users");
+                Console.WriteLine("4. Print the List of Comments");
+                Console.WriteLine("5. Exit");
 
-            //    Users firstUser = new Users();
-            //    firstUser.UserID = 10;
-            //    firstUser.UserName = "P3nnyw1s3";
-            //    firstUser.Email = "P3nnyw1s3@anywhere.com";
-            //    firstUser.Password = "P@$$w0rd10";
+                Console.WriteLine("");
+                Console.WriteLine("Please select an option");
+                response = Console.ReadLine();
 
+                switch(response)
+                {
+                    case "1":
+                        Users user = new Users();
+                        user.Email = "myemail@somewhere.com";
+                        user.Password = "password";
+                        user.UserID = 1;
+                        user.UserName = "Kat";
 
-            //    userList.Add(firstUser);
+                        userlist.Add(user);
 
-            //    Users secondUser = new Users();
-            //    secondUser.UserID = 9;
-            //    secondUser.UserName = "Sakura";
-            //    secondUser.Email = "Sakura@anywhere.com";
-            //    secondUser.Password = "P@$$w0rd9";
+                        Console.WriteLine("You have created a user");
+                        break;
+                    case "2":
+                        Comments myComment = new Comments();
+                        myComment.CommentId = 1;
+                        myComment.TheComment = "What's up";
 
+                        commentList.Add(myComment);
 
-            //    userList.Add(secondUser);
+                        Console.WriteLine("You have created a comment");
+                        break;
+                    case "3":
+                        Console.WriteLine("This is the list of users created:");
 
-            //    Users thirdUser = new Users();
-            //    thirdUser.UserID = 8;
-            //    thirdUser.UserName = "Sunl3ss";
-            //    thirdUser.Email = "Sunl3ss@anywhere.com";
-            //    thirdUser.Password = "P@$$w0rd8";
+                        foreach (var insideUser in userlist)
+                        {
+                            Console.WriteLine("The user email is: " + insideUser.Email);
+                            Console.WriteLine("The user password is: " + insideUser.Password);
+                            Console.WriteLine("The user id is: " + insideUser.UserID);
+                            Console.WriteLine("The user name is: " + insideUser.UserName);
+                        }
+                        break;
+                    case "4":
+                        Console.WriteLine("This is the list of comments created:");
 
-            //    userList.Add(thirdUser);
-
-            //    Users fourthUser = new Users();
-            //    fourthUser.UserID = 7;
-            //    fourthUser.UserName = "Glu3d2U";
-            //    fourthUser.Email = "Glu3d2U@anywhere.com";
-            //    fourthUser.Password = "P@$$w0rd7";
-
-            //    userList.Add(fourthUser);
-
-            //    Users fifthUser = new Users();
-            //    fifthUser.UserID = 6;
-            //    fifthUser.UserName = "B0bBu1ld3r";
-            //    fifthUser.Email = "B0bBu1ld3r@anywhere.com";
-            //    fifthUser.Password = "P@$$w0rd6";
-
-            //    userList.Add(fifthUser);
-
-            //    Users sixthUser = new Users();
-            //    sixthUser.UserID = 5;
-            //    sixthUser.UserName = "B00t13$";
-            //    sixthUser.Email = "B00t13$@anywhere.com";
-            //    sixthUser.Password = "P@$$w0rd5";
-
-
-            //    userList.Add(sixthUser);
-
-            //    Users seventhUser = new Users();
-            //    seventhUser.UserID = 4;
-            //    seventhUser.UserName = "P1c@$$0";
-            //    seventhUser.Email = "P1c@$$0@anywhere.com";
-            //    seventhUser.Password = "P@$$w0rd4";
-
-            //    userList.Add(seventhUser);
-
-            //    Users eighthUser = new Users();
-            //    eighthUser.UserID = 3;
-            //    eighthUser.UserName = "Th0u$@ndl1ve$";
-            //    eighthUser.Email = "Th0u$@ndl1ve$@anywhere.com";
-            //    eighthUser.Password = "P@$$w0rd3";
-
-            //    userList.Add(eighthUser);
-
-            //    Users ninthUser = new Users();
-            //    ninthUser.UserID = 2;
-            //    ninthUser.UserName = "foosb@ll3r";
-            //    ninthUser.Email = "foosb@ll3r@anywhere.com";
-            //    ninthUser.Password = "P@$$w0rd2";
-
-            //    userList.Add(ninthUser);
-
-            //    Users tenthUser = new Users();
-            //    tenthUser.UserID = 1;
-            //    tenthUser.UserName = "SkadrGrl";
-            //    tenthUser.Email = "SkadrGrl@anywhere.com";
-            //    tenthUser.Password = "P@$$w0rd1";
-
-            //    userList.Add(tenthUser);
-
-
-            //    List<Users> result = userList.Where(users => users.UserID == 1).ToList();
-
-            //    if (result.Count == 0)
-            //    {
-            //        throw new UserNotFound("This user does not exist in this list of users");
-            //    }
-            //    else
-            //    {
-            //        foreach (var users in result)
-            //        {
-            //            Console.WriteLine(users.UserID);
-            //            Console.WriteLine(users.UserName);
-            //            Console.WriteLine(users.Email);
-            //            Console.WriteLine(users.Password);
-
-
-
-            //NewClass<string, bool, int> myNewClass = new NewClass<string, bool, int>();
-            //myNewClass.GenericProperty = "My generic string";
-            //myNewClass.GenericProperty2 = true;
-            //myNewClass.GenericProperty3 = 100204;
-
-            //Console.WriteLine(myNewClass.GenericProperty);
-            //Console.WriteLine(myNewClass.GenericProperty2);
-            //Console.WriteLine(myNewClass.GenericProperty3);
-
-
-            RegularClass myNewClass = new RegularClass();
-            myNewClass.PrintToTheConsole<bool>(91090, "This is a string", true);
+                        foreach (var insideComment in commentList)
+                        {
+                            Console.WriteLine("The comment id is: " + insideComment.CommentId);
+                            Console.WriteLine("The actual comment is: " + insideComment.TheComment);
+                        }
+                        break;
+                }
+            }
+            
         }
-    }
-}
-
-//catch (UserNotFound exception)
-//{
-//    Console.WriteLine(exception.Message);
-//}
-//finally
-//{
-
-//}
-
-
-
-
-            //Users usersObject = new Users("SunnyDLight", "YouAreNotTheWay");
-
-            //string stringFormat = "My influencer name is {0} and my regular username is {1}.";
-
-            //Console.WriteLine(String.Format(stringFormat, usersObject.privateUserName, usersObject.publicUserName));
-
-            //UsersDTO newDTOUser = new UsersDTO();
-            //newDTOUser.privateUserName = "BobEsponja";
-            //newDTOUser.publicUserName = "LipBalm";
-
-            //String newstringFormat = "My new influencer name is {0} and my new reg username is {1}.";
-
-            //Console.WriteLine(String.Format(newstringFormat, newDTOUser.privateUserName, newDTOUser.publicUserName));
-
-
-
-            //DateTime myDateTimeVariable1 = new DateTime(2004,10,04);
-            //DateTime myDateTimeVariable2 = new DateTime(1987,01,16);
-
-
-            // if (myDateTimeVariable1 < myDateTimeVariable2)
-            //{
-            //    Console.WriteLine("Yes, it is less!");
-            //}
-            // else
-            //{
-            //    Console.WriteLine("No, it is greater!");
-            //}
-
-
-            // int loopVal;
-            // int end_value = 21;
-            // int addition = 0;
-
-            // for (loopVal = 1; loopVal < end_value; loopVal++)
-            // {
-            //     addition = addition + loopVal;
-            // }
-            // {
-            //     Console.WriteLine("Total = " + addition);
-            // }
-
-
-            //int[] myArray = new int[] {1,2,3,4,5};
-
-            //Console.WriteLine("The array has " + myArray.Length);
-
-            //List<int> myList = new List<int>();
-
-            //myList.Add(0);
-            //myList.Add(1);
-            //myList.Add(2);
-            //myList.Add(3);
-            //myList.Add(4);
-            //myList.Add(5);
-            //myList.Add(6);
-            //myList.Add(7);
-            //myList.Add(8);
-            //myList.Add(9);
-            //myList.Add(10);
-
-            // foreach(var item in myList)
-            //{
-            //    Console.Write(item + ",");
-            //}
-            //        }
-            //    }
-            //}
-
-            //public class UserNotFound : Exception
-            //{
-            //    public UserNotFound(string errorMessage) : base(errorMessage)
-            //    {
-
-            //    }
-            //}
-
-
-        //public class NewClass<T, K, B>
-        //{
-        //    public T GenericProperty { get; set; }
-        //    public K GenericProperty2 { get; set; }
-        //    public B GenericProperty3 { get; set; }
-        //}
-
-
-public class RegularClass
-{
-    public void PrintToTheConsole<T>(int parameter1, string parameter2, T parameter3)
-    {
-        Console.WriteLine("The values of parameters are the following:");
-        Console.WriteLine(parameter1);
-        Console.WriteLine(parameter2);
-        Console.WriteLine(parameter3);
     }
 }
