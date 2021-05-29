@@ -1,21 +1,23 @@
 ﻿<Properties StartupConfiguration="{10656C5B-A85A-426B-955A-3B360DEF6288}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="DisneyShoppingCart/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DisneyShoppingCart/DTOS/UsersDTO.cs">
     <Files>
-      <File FileName="DisneyShoppingCart/Program.cs" Line="44" Column="44" />
-      <File FileName="DisneyShoppingCart/Models/Users.cs" />
-      <File FileName="DisneyShoppingCart/Models/Roles.cs" />
-      <File FileName="DisneyShoppingCart/Models/Images.cs" />
-      <File FileName="DisneyShoppingCart/Models/Posts.cs" />
-      <File FileName="DisneyShoppingCart/Models/Comments.cs" />
+      <File FileName="DisneyShoppingCart/Program.cs" Line="32" Column="14" />
+      <File FileName="DisneyShoppingCart/Models/Users.cs" Line="10" Column="31" />
+      <File FileName="DisneyShoppingCart/Models/Roles.cs" Line="1" Column="1" />
+      <File FileName="DisneyShoppingCart/Models/Images.cs" Line="1" Column="1" />
+      <File FileName="DisneyShoppingCart/Models/Posts.cs" Line="1" Column="1" />
+      <File FileName="DisneyShoppingCart/Models/Comments.cs" Line="1" Column="1" />
+      <File FileName="DisneyShoppingCart/DTOS/UsersDTO.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="DisneyShoppingCart" expanded="True">
             <Node name="DisneyShoppingCart" expanded="True">
-              <Node name="DTOS" expanded="True" />
+              <Node name="DTOS" expanded="True">
+                <Node name="UsersDTO.cs" selected="True" />
+              </Node>
               <Node name="Models" expanded="True" />
-              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>

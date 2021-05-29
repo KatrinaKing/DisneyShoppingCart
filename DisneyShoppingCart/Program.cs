@@ -2,11 +2,14 @@
 using DisneyShoppingCart.Models;
 using DisneyShoppingCart.DTOS;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DisneyShoppingCart
 {
     class Program
     {
+        private static object users;
+
         static void Main(string[] args)
         {
 
@@ -16,7 +19,136 @@ namespace DisneyShoppingCart
 
         static void MyMethod()
         {
-            ///*Users usersObject = new Users("SunnyDLight", "YouAreNotTheWay");
+
+            try
+            {
+                List<Users> myList = new List<Users>();
+
+                Users firstUser = new Users();
+                firstUser.UserID = 10;
+                firstUser.UserName = "P3nnyw1s3";
+                firstUser.UserType = "Public";
+                firstUser.UserHobby ="scary Movies";
+                firstUser.UserState = "Washington";
+
+                myList.Add(firstUser);
+
+                Users secondUser = new Users();
+                secondUser.UserID = 9;
+                secondUser.UserName = "Sakura";
+                secondUser.UserType = "Private";
+                secondUser.UserHobby = "Anime";
+                secondUser.UserState = "Maine";
+
+                myList.Add(secondUser);
+
+                Users thirdUser = new Users();
+                thirdUser.UserID = 8;
+                thirdUser.UserName = "Sunl3ss";
+                thirdUser.UserType = "Private";
+                thirdUser.UserHobby = "Gardening";
+                thirdUser.UserState = "California";
+
+                myList.Add(thirdUser);
+
+                Users fourthUser = new Users();
+                fourthUser.UserID = 7;
+                fourthUser.UserName = "Glu3d2U";
+                fourthUser.UserType = "Public";
+                fourthUser.UserHobby = "Crafts";
+                fourthUser.UserState = "Virginia";
+
+                myList.Add(fourthUser);
+
+                Users fifthUser = new Users();
+                fifthUser.UserID = 6;
+                fifthUser.UserName = "B0bBu1ld3r";
+                fifthUser.UserType = "Private";
+                fifthUser.UserHobby = "Carpentry";
+                fifthUser.UserState = "Arizona";
+
+                myList.Add(fifthUser);
+
+                Users sixthUser = new Users();
+                sixthUser.UserID = 5;
+                sixthUser.UserName = "B00t13$";
+                sixthUser.UserType = "Public";
+                sixthUser.UserHobby = "Hiking";
+                sixthUser.UserState = "Texas";
+
+                myList.Add(sixthUser);
+
+                Users seventhUser = new Users();
+                seventhUser.UserID = 4;
+                seventhUser.UserName = "P1c@$$0";
+                seventhUser.UserType = "Public";
+                seventhUser.UserHobby = "Painting";
+                seventhUser.UserState = "Florida";
+
+                myList.Add(seventhUser);
+
+                Users eighthUser = new Users();
+                eighthUser.UserID = 3;
+                eighthUser.UserName = "Th0u$@ndl1ve$";
+                eighthUser.UserType = "Private";
+                eighthUser.UserHobby = "Reading";
+                eighthUser.UserState = "Georgia";
+
+                myList.Add(eighthUser);
+
+                Users ninthUser = new Users();
+                ninthUser.UserID = 2;
+                ninthUser.UserName = "foosb@ll3r";
+                ninthUser.UserType = "Public";
+                ninthUser.UserHobby = "Football";
+                ninthUser.UserState = "New York";
+
+                myList.Add(ninthUser);
+
+                Users tenthUser = new Users();
+                tenthUser.UserID = 1;
+                tenthUser.UserName = "SkadrGrl";
+                tenthUser.UserType = "Private";
+                tenthUser.UserHobby = "Skateboards";
+                tenthUser.UserState = "Oregon";
+
+                myList.Add(tenthUser);
+
+
+                List<Users> result = myList.Where(users => users.UserID == 1).ToList();
+
+                if(result.Count == 0)
+                {
+                    throw new UserNotFound("This user does not exist in this list of users");
+                }
+                else
+                {
+                    foreach (var users in result)
+                    {
+                        Console.WriteLine(users.UserID);
+                        Console.WriteLine(users.UserName);
+                        Console.WriteLine(users.UserType);
+                        Console.WriteLine(users.UserHobby);
+                        Console.WriteLine(users.UserState);
+                    }
+                }
+            }
+
+            catch (UserNotFound exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+            finally
+            {
+
+            }
+
+
+
+
+
+
+            //Users usersObject = new Users("SunnyDLight", "YouAreNotTheWay");
 
             //string stringFormat = "My influencer name is {0} and my regular username is {1}.";
 
@@ -28,7 +160,7 @@ namespace DisneyShoppingCart
 
             //String newstringFormat = "My new influencer name is {0} and my new reg username is {1}.";
 
-            //Console.WriteLine(String.Format(newstringFormat, newDTOUser.privateUserName, newDTOUser.publicUserName));*/
+            //Console.WriteLine(String.Format(newstringFormat, newDTOUser.privateUserName, newDTOUser.publicUserName));
 
 
 
@@ -59,28 +191,36 @@ namespace DisneyShoppingCart
             // }
 
 
-            int[] myArray = new int[] {1,2,3,4,5};
+            //int[] myArray = new int[] {1,2,3,4,5};
 
-            Console.WriteLine("The array has " + myArray.Length);
+            //Console.WriteLine("The array has " + myArray.Length);
 
-            List<int> myList = new List<int>();
+            //List<int> myList = new List<int>();
 
-            myList.Add(0);
-            myList.Add(1);
-            myList.Add(2);
-            myList.Add(3);
-            myList.Add(4);
-            myList.Add(5);
-            myList.Add(6);
-            myList.Add(7);
-            myList.Add(8);
-            myList.Add(9);
-            myList.Add(10);
+            //myList.Add(0);
+            //myList.Add(1);
+            //myList.Add(2);
+            //myList.Add(3);
+            //myList.Add(4);
+            //myList.Add(5);
+            //myList.Add(6);
+            //myList.Add(7);
+            //myList.Add(8);
+            //myList.Add(9);
+            //myList.Add(10);
 
-             foreach(var item in myList)
-            {
-                Console.Write(item + ",");
-            }
+            // foreach(var item in myList)
+            //{
+            //    Console.Write(item + ",");
+            //}
         }
+    }
+}
+
+public class UserNotFound : Exception
+{
+    public UserNotFound(string errorMessage) : base(errorMessage)
+    {
+
     }
 }
