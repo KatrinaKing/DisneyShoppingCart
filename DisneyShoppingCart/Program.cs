@@ -125,14 +125,18 @@ namespace DisneyShoppingCart
 
 
 
-            NewClass<string, bool, int> myNewClass = new NewClass<string, bool, int>();
-            myNewClass.GenericProperty = "My generic string";
-            myNewClass.GenericProperty2 = true;
-            myNewClass.GenericProperty3 = 100204;
+            //NewClass<string, bool, int> myNewClass = new NewClass<string, bool, int>();
+            //myNewClass.GenericProperty = "My generic string";
+            //myNewClass.GenericProperty2 = true;
+            //myNewClass.GenericProperty3 = 100204;
 
-            Console.WriteLine(myNewClass.GenericProperty);
-            Console.WriteLine(myNewClass.GenericProperty2);
-            Console.WriteLine(myNewClass.GenericProperty3);
+            //Console.WriteLine(myNewClass.GenericProperty);
+            //Console.WriteLine(myNewClass.GenericProperty2);
+            //Console.WriteLine(myNewClass.GenericProperty3);
+
+
+            RegularClass myNewClass = new RegularClass();
+            myNewClass.PrintToTheConsole<bool>(91090, "This is a string", true);
         }
     }
 }
@@ -227,9 +231,21 @@ namespace DisneyShoppingCart
             //}
 
 
-        public class NewClass<T, K, B>
-        {
-            public T GenericProperty { get; set; }
-            public K GenericProperty2 { get; set; }
-            public B GenericProperty3 { get; set; }
-        }
+        //public class NewClass<T, K, B>
+        //{
+        //    public T GenericProperty { get; set; }
+        //    public K GenericProperty2 { get; set; }
+        //    public B GenericProperty3 { get; set; }
+        //}
+
+
+public class RegularClass
+{
+    public void PrintToTheConsole<T>(int parameter1, string parameter2, T parameter3)
+    {
+        Console.WriteLine("The values of parameters are the following:");
+        Console.WriteLine(parameter1);
+        Console.WriteLine(parameter2);
+        Console.WriteLine(parameter3);
+    }
+}
