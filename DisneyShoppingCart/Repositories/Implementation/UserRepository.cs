@@ -23,12 +23,12 @@ namespace DisneyShoppingCart.Repositories.Implementation
                 {
                     Console.WriteLine(newUsers.UserID);
                     Console.WriteLine(newUsers.UserName);
-                    Console.WriteLine(newUsers.Email);
+                    Console.WriteLine(newUsers.UserName);
                 }
             }
             else
             {
-                Console.WriteLine("No UserName found");
+                throw new UserNotFound("No User Found");
             }
         }
 
