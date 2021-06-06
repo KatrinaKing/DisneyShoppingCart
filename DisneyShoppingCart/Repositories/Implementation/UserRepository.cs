@@ -34,7 +34,7 @@ namespace DisneyShoppingCart.Repositories.Implementation
 
         public void GetAllUsersByName(string name)
         {
-            Console.WriteLine("Not here");
+            Console.WriteLine("Found user");
         }
     }
     }

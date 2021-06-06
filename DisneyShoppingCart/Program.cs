@@ -105,7 +105,7 @@ namespace DisneyShoppingCart
             userRepo.Save(newUsers2);
             userRepo.Save(newUsers3);
 
-            userRepo.GetAllUsersByName();
+            userRepo.GetAllUsersByName("Kat");
 
         }
     }
