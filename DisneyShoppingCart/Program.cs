@@ -81,7 +81,7 @@ namespace DisneyShoppingCart
 
 
             UserRepository userRepo = new UserRepository();
-            userRepo.GetAllUsersByName("Kat");
+            userRepo.GetAllUsersByName("UserName");
 
             Users newUsers = new Users();
             newUsers.UserID = 1;
@@ -105,7 +105,7 @@ namespace DisneyShoppingCart
             userRepo.Save(newUsers2);
             userRepo.Save(newUsers3);
 
-            userRepo.GetAllUsersByName("Kat");
+            userRepo.GetAllUsersByName("UserName");
 
         }
     }

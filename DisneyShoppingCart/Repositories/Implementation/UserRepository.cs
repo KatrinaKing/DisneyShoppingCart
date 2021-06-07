@@ -12,7 +12,9 @@ namespace DisneyShoppingCart.Repositories.Implementation
         {
         }
 
-        public void GetAllUsersByName()
+        
+
+        public void GetAllUsersByName(string username)
         {
             List<Users> resultList =
                 currentDataBase.Where(Users => Users.UserName == "UserName").ToList();
@@ -32,9 +34,9 @@ namespace DisneyShoppingCart.Repositories.Implementation
             }
         }
 
-        public void GetAllUsersByName(string name)
+        public void GetAllUsersByName()
         {
-            Console.WriteLine("Found user");
+            Console.WriteLine("Not here");
         }
     }
     }
