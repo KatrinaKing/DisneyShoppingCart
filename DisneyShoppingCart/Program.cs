@@ -4,6 +4,8 @@ using DisneyShoppingCart.DTOS;
 using System.Collections.Generic;
 using System.Linq;
 using DisneyShoppingCart.Repositories.Implementation;
+using DisneyShoppingCart.FileManager;
+using System.IO;
 
 namespace DisneyShoppingCart
 {
@@ -80,33 +82,46 @@ namespace DisneyShoppingCart
             //    break;
 
 
-            UserRepository userRepo = new UserRepository();
-            userRepo.GetAllUsersByName("UserName");
+            //UserRepository userRepo = new UserRepository();
+            //userRepo.GetAllUsersByName("UserName");
 
-            Users newUsers = new Users();
-            newUsers.UserID = 1;
-            newUsers.Email = "myemail@somewhere.com";
-            newUsers.Password = "password";
-            newUsers.UserName = "Kat";
+            //Users newUsers = new Users();
+            //newUsers.UserID = 1;
+            //newUsers.Email = "myemail@somewhere.com";
+            //newUsers.Password = "password";
+            //newUsers.UserName = "Kat";
 
-            Users newUsers2 = new Users();
-            newUsers2.UserID = 2;
-            newUsers2.Email = "theiremail@somewhere.com";
-            newUsers2.Password = "password";
-            newUsers2.UserName = "Brandon";
+            //Users newUsers2 = new Users();
+            //newUsers2.UserID = 2;
+            //newUsers2.Email = "theiremail@somewhere.com";
+            //newUsers2.Password = "password";
+            //newUsers2.UserName = "Brandon";
 
-            Users newUsers3 = new Users();
-            newUsers3.UserID = 3;
-            newUsers3.Email = "theyemail@somewhere.com";
-            newUsers3.Password = "password";
-            newUsers3.UserName = "Athena";
+            //Users newUsers3 = new Users();
+            //newUsers3.UserID = 3;
+            //newUsers3.Email = "theyemail@somewhere.com";
+            //newUsers3.Password = "password";
+            //newUsers3.UserName = "Athena";
 
-            userRepo.Save(newUsers);
-            userRepo.Save(newUsers2);
-            userRepo.Save(newUsers3);
+            //userRepo.Save(newUsers);
+            //userRepo.Save(newUsers2);
+            //userRepo.Save(newUsers3);
 
-            userRepo.GetAllUsersByName("UserName");
+            //userRepo.GetAllUsersByName("UserName");
 
+            string path = "TestDirectory";
+            string moveToPath = "../../TestDirectory";
+
+            FileManagerClass newManager =
+                new FileManagerClass();
+
+            //newManager.CreateAFile(path);
+
+            //newManager.MoveFile(path, moveToPath);
+
+            newManager.CreateDirectory(path);
+
+            newManager.MoveDirectory(path, moveToPath);
         }
     }
 
