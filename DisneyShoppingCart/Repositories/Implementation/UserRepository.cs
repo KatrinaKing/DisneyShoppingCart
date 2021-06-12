@@ -17,7 +17,7 @@ namespace DisneyShoppingCart.Repositories.Implementation
         public void GetAllUsersByName(string UserName)
         {
             List<Users> resultList =
-                currentDataBase.Where(Users => Users.UserName == "UserName").ToList();
+                currentDataBase.Where(Users => Users.UserName == UserName).ToList();
 
             if (resultList.Count > 0)
             {
