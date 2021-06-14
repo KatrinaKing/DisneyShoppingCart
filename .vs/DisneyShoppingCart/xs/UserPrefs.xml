@@ -1,14 +1,8 @@
 ﻿<Properties StartupConfiguration="{10656C5B-A85A-426B-955A-3B360DEF6288}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="DisneyShoppingCart/FileManager/FileManager.cs">
     <Files>
-      <File FileName="DisneyShoppingCart/Models/Users.cs" Line="11" Column="28" />
-      <File FileName="DisneyShoppingCart/Models/Comments.cs" />
-      <File FileName="DisneyShoppingCart/Repositories/IMainRepository.cs" />
-      <File FileName="DisneyShoppingCart/Repositories/Implementation/MainRepository.cs" />
-      <File FileName="DisneyShoppingCart/Repositories/IUser_Repository.cs" />
-      <File FileName="DisneyShoppingCart/Repositories/Implementation/UserRepository.cs" />
-      <File FileName="DisneyShoppingCart/Program.cs" />
-      <File FileName="DisneyShoppingCart/FileManager/FileManager.cs" Line="75" Column="14" />
+      <File FileName="DisneyShoppingCart/Program.cs" Line="8" Column="17" />
+      <File FileName="DisneyShoppingCart/FileManager/FileManager.cs" Line="101" Column="39" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

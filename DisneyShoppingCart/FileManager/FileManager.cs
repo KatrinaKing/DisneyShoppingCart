@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using DisneyShoppingCart.Models;
 
 namespace DisneyShoppingCart.FileManager
 {
@@ -90,6 +92,18 @@ namespace DisneyShoppingCart.FileManager
             {
                 Console.WriteLine("Directory does not exist");
             }
+        }
+
+        public void AddUsersToFile(string path,
+                                    List<Users> userList)
+        {
+            FileStream newStream =
+                new FileStream(path, FileMode.Create,
+                                FileAccess.Write);
+
+            StreamWriter writer = new StreamWriter(newStream);
+            writer.Write("something");
+            writer.Flush();
         }
     }
 }
