@@ -1,64 +1,71 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using DisneyShoppingCart.Models;
+
 
 namespace DisneyShoppingCart.FileManager
 {
     public class FileManagerClass
     {
-        public FileManagerClass()
-        {
-        }
+        //private object newUsers;
 
-        public void CreateAFile(string path)
-        {
-            bool fileExist = File.Exists(path);
+        //private object newUsers;
 
-            if (fileExist)
-            {
-                Console.WriteLine("File already exists");
+        //public FileManagerClass()
+        //{
+        //}
 
-                DateTime creationTime =
-                    File.GetCreationTime(path);
+        //public void CreateAFile(string path)
+        //{
+        //    bool fileExist = File.Exists(path);
 
-                Console.WriteLine("File was created on:"
-                                    + creationTime);
+        //    if (fileExist)
+        //    {
+        //        Console.WriteLine("File already exists");
 
-                DateTime modifiedTime =
-                    File.GetLastWriteTime(path);
+        //        DateTime creationTime =
+        //            File.GetCreationTime(path);
 
-                Console.WriteLine("File was modified on:"
-                                    + modifiedTime);
-            }
-            else
-            {
-                Console.WriteLine("You have created the file:"
-                                    + path);
-                File.Create(path);
-            }
-        }
+        //        Console.WriteLine("File was created on:"
+        //                            + creationTime);
 
-        public void MoveFile(string source, string destination)
-        {
-            bool fileExist = File.Exists(source);
+        //        DateTime modifiedTime =
+        //            File.GetLastWriteTime(path);
 
-            if (fileExist)
-            {
-                File.Move(source, destination);
-                Console.WriteLine("You have moved the file");
-            }
-            else
-            {
-                Console.WriteLine("File doesn't exist");
-            }
-        }
+        //        Console.WriteLine("File was modified on:"
+        //                            + modifiedTime);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("You have created the file:"
+        //                            + path);
+        //        File.Create(path);
+        //    }
+        //}
+
+        //public void MoveFile(string source, string destination)
+        //{
+        //    bool fileExist = File.Exists(source);
+
+        //    if (fileExist)
+        //    {
+        //        File.Move(source, destination);
+        //        Console.WriteLine("You have moved the file");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("File doesn't exist");
+        //    }
+        //}
 
         public void CreateDirectory(string path)
         {
             bool directoryExists = Directory.Exists(path);
 
-            if(directoryExists)
+            if (directoryExists)
             {
                 Console.WriteLine("The directory already exists");
 
@@ -79,6 +86,8 @@ namespace DisneyShoppingCart.FileManager
             }
         }
 
+
+
         public void MoveDirectory(string source, string destination)
         {
             bool directoryExists = Directory.Exists(source);
@@ -97,13 +106,31 @@ namespace DisneyShoppingCart.FileManager
         public void AddUsersToFile(string path,
                                     List<Users> userList)
         {
+            Users newUser = new Users();
+            newUser.Email = "myemail@somewhere.com";
+            newUser.Password = "password";
+            newUser.UserName = "Kat";
+
+            Comments newComment = new Comments();
+            newComment.TheComment = "This is the comment";
+
+            path = "File1.txt";
+            IFormatter formatter = new BinaryFormatter();
+
+
             FileStream newStream =
                 new FileStream(path, FileMode.Create,
                                 FileAccess.Write);
 
+            formatter.Serialize(newStream, newUser);
+            
+
             StreamWriter writer = new StreamWriter(newStream);
+            writer.Write(newUser.UserName);
+            writer.Write(newComment.TheComment);
             writer.Write("something");
             writer.Flush();
+            newStream.Close();
         }
     }
 }
