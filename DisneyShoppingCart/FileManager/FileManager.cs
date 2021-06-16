@@ -10,57 +10,6 @@ namespace DisneyShoppingCart.FileManager
 {
     public class FileManagerClass
     {
-        //private object newUsers;
-
-        //private object newUsers;
-
-        //public FileManagerClass()
-        //{
-        //}
-
-        //public void CreateAFile(string path)
-        //{
-        //    bool fileExist = File.Exists(path);
-
-        //    if (fileExist)
-        //    {
-        //        Console.WriteLine("File already exists");
-
-        //        DateTime creationTime =
-        //            File.GetCreationTime(path);
-
-        //        Console.WriteLine("File was created on:"
-        //                            + creationTime);
-
-        //        DateTime modifiedTime =
-        //            File.GetLastWriteTime(path);
-
-        //        Console.WriteLine("File was modified on:"
-        //                            + modifiedTime);
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("You have created the file:"
-        //                            + path);
-        //        File.Create(path);
-        //    }
-        //}
-
-        //public void MoveFile(string source, string destination)
-        //{
-        //    bool fileExist = File.Exists(source);
-
-        //    if (fileExist)
-        //    {
-        //        File.Move(source, destination);
-        //        Console.WriteLine("You have moved the file");
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("File doesn't exist");
-        //    }
-        //}
-
         public void CreateDirectory(string path)
         {
             bool directoryExists = Directory.Exists(path);
@@ -129,6 +78,45 @@ namespace DisneyShoppingCart.FileManager
             writer.Write(newUser.UserName);
             writer.Write(newComment.TheComment);
             writer.Write("something");
+            writer.Flush();
+            newStream.Close();
+        }
+
+        public void AddInfoToFile(string path,
+                                    List<Users> users, List<Comments> comments)
+        {
+   
+            IFormatter formatter = new BinaryFormatter();
+
+
+            FileStream newStream =
+                new FileStream(path, FileMode.Create,
+                                FileAccess.Write);
+            StreamWriter writer = new StreamWriter(newStream);
+
+            foreach(var user in users)
+            {
+                //try
+                //{
+                //    formatter.Serialize(newStream, user);
+                //}
+                //catch (Exception e)
+                //{
+                //    Console.WriteLine(e.Message);
+                //    throw;
+                //}
+
+                writer.Write(user.UserName);
+
+            }
+
+            foreach (var comment in comments)
+            {
+                formatter.Serialize(newStream, comment);
+                writer.Write(comment.TheComment);
+
+            }
+            
             writer.Flush();
             newStream.Close();
         }

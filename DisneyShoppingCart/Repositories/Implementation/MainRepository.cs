@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using DisneyShoppingCart.Models;
 
 namespace DisneyShoppingCart.Repositories.Implementation
 {
-    public class MainRepository<T> : IMainRepository<T>
+    public abstract class MainRepository<T> : IMainRepository<T>
     {
         public List<T> currentDataBase = new List<T>();
-
-        public MainRepository()
-        {
-        }
 
         public void Delete(T User)
         {
@@ -17,17 +14,14 @@ namespace DisneyShoppingCart.Repositories.Implementation
             Console.WriteLine("You deleted the User");
         }
 
-        public void Save(T User)
-        {
-            currentDataBase.Add(User);
-            Console.WriteLine("You saved the User");
-        }
+        public abstract void Save(T User);
 
         public void Update(T User)
         {
             Console.WriteLine("You updated the User");
         }
 
+        public abstract List<T> Get();
 
     }
 

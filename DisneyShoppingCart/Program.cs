@@ -2,129 +2,152 @@
 using DisneyShoppingCart.Models;
 using DisneyShoppingCart.DTOS;
 using System.Collections.Generic;
-using System.Linq;
 using DisneyShoppingCart.Repositories.Implementation;
 using DisneyShoppingCart.FileManager;
-using System.IO;
 
 namespace DisneyShoppingCart
 {
     class Program
     {
-       
+
 
         static void Main(string[] args)
         {
 
             Program.MyMethod();
-           
+
         }
 
         static void MyMethod()
         {
-            //string response = "";
-            //List<Users> userlist = new List<Users>();
-            //List<Comments> commentList = new List<Comments>();
+            FileManagerClass fm = new FileManagerClass();
+            List<Users> userlist = new List<Users>();
+            List<Comments> commentList = new List<Comments>();
+            Users user = new Users();
 
-            //while (response!="5")
-            //{
-            //    Console.WriteLine("1. Create a User");
-            //    Console.WriteLine("2. Create a Comment");
-            //    Console.WriteLine("3. Print the List of Users");
-            //    Console.WriteLine("4. Print the List of Comments");
-            //    Console.WriteLine("5. Exit");
+            UserRepository userRepo = new UserRepository();
+            CommentRepository commentRepo = new CommentRepository();
 
-            //    Console.WriteLine("");
-            //    Console.WriteLine("Please select an option");
-            //    response = Console.ReadLine();
+            Users newUsers = new Users();
+            newUsers.UserID = 1;
+            newUsers.Email = "myemail@somewhere.com";
+            newUsers.Password = "password";
+            newUsers.UserName = "Kat";
 
-            //    switch(response)
-            //    {
-            //case "1":
-            //    Users user = new Users();
-            //    user.Email = "myemail@somewhere.com";
-            //    user.Password = "password";
-            //    user.UserID = 1;
-            //    user.UserName = "Kat";
+            Users newUsers2 = new Users();
+            newUsers2.UserID = 2;
+            newUsers2.Email = "theiremail@somewhere.com";
+            newUsers2.Password = "password";
+            newUsers2.UserName = "Brandon";
 
-            //    userlist.Add(user);
+            Users newUsers3 = new Users();
+            newUsers3.UserID = 3;
+            newUsers3.Email = "theyemail@somewhere.com";
+            newUsers3.Password = "password";
+            newUsers3.UserName = "Athena";
 
-            //    Console.WriteLine("You have created a user");
-            //    break;
-            //case "2":
-            //    Comments myComment = new Comments();
-            //    myComment.CommentId = 1;
-            //    myComment.TheComment = "What's up";
+            userRepo.Save(newUsers);
+            userRepo.Save(newUsers2);
+            userRepo.Save(newUsers3);
 
-            //    commentList.Add(myComment);
+            var response = "";
 
-            //    Console.WriteLine("You have created a comment");
-            //    break;
-            //case "3":
-            //    Console.WriteLine("This is the list of users created:");
+            while (response != "8")
+            {
+                Console.WriteLine("1. Create a User");
+                Console.WriteLine("2. Create a Comment");
+                Console.WriteLine("3. Print the List of Users");
+                Console.WriteLine("4. Print the List of Comments");
+                Console.WriteLine("5. Look for a User");
+                Console.WriteLine("6. Look for a Comment");
+                Console.WriteLine("7. Create a Data File");
+                Console.WriteLine("8. Exit");
 
-            //    foreach (var insideUser in userlist)
-            //    {
-            //        Console.WriteLine("The user email is: " + insideUser.Email);
-            //        Console.WriteLine("The user password is: " + insideUser.Password);
-            //        Console.WriteLine("The user id is: " + insideUser.UserID);
-            //        Console.WriteLine("The user name is: " + insideUser.UserName);
-            //    }
-            //    break;
-            //case "4":
-            //    Console.WriteLine("This is the list of comments created:");
+                Console.WriteLine("");
+                Console.WriteLine("Please select an option");
+                response = Console.ReadLine();
 
-            //    foreach (var insideComment in commentList)
-            //    {
-            //        Console.WriteLine("The comment id is: " + insideComment.CommentId);
-            //        Console.WriteLine("The actual comment is: " + insideComment.TheComment);
-            //    }
-            //    break;
+                switch (response)
+                {
+                    case "1":
+                        user = new Users();
+                        Console.WriteLine("Enter your email");
+                        user.Email = Console.ReadLine();
+                        Console.WriteLine("Enter your Username");
+                        user.UserName = Console.ReadLine();
+                        Console.WriteLine("Enter your password");
+                        user.Password = Console.ReadLine();
+                        userRepo.Save(user);
+
+                        //Console.WriteLine("You have created a user");
+                        break;
+                    case "2":
+                        Comments myComment = new Comments();
+                        Console.WriteLine("Enter your comment");
+                        myComment.TheComment = Console.ReadLine();
 
 
-            //UserRepository userRepo = new UserRepository();
-            //userRepo.GetAllUsersByName("UserName");
+                        commentRepo.Save(myComment);
 
-            //Users newUsers = new Users();
-            //newUsers.UserID = 1;
-            //newUsers.Email = "myemail@somewhere.com";
-            //newUsers.Password = "password";
-            //newUsers.UserName = "Kat";
+                        Console.WriteLine("You have created a comment");
+                        break;
+                    case "3":
+                        Console.WriteLine("This is the list of users created:");
 
-            //Users newUsers2 = new Users();
-            //newUsers2.UserID = 2;
-            //newUsers2.Email = "theiremail@somewhere.com";
-            //newUsers2.Password = "password";
-            //newUsers2.UserName = "Brandon";
+                        userlist = userRepo.Get();
 
-            //Users newUsers3 = new Users();
-            //newUsers3.UserID = 3;
-            //newUsers3.Email = "theyemail@somewhere.com";
-            //newUsers3.Password = "password";
-            //newUsers3.UserName = "Athena";
+                        foreach (Users userX in userlist)
+                        {
+                            Console.WriteLine("The user email is: " + userX.Email);
+                            Console.WriteLine("The user password is: " + userX.Password);
+                            Console.WriteLine("The user id is: " + userX.UserID);
+                            Console.WriteLine("The user name is: " + userX.UserName);
+                            Console.WriteLine("");
+                        }
+                        break;
+                    case "4":
+                        Console.WriteLine("This is the list of comments created:");
 
-            //userRepo.Save(newUsers);
-            //userRepo.Save(newUsers2);
-            //userRepo.Save(newUsers3);
+                        commentList = commentRepo.Get();
 
-            //userRepo.GetAllUsersByName("UserName");
+                        foreach (var insideComment in commentList)
+                        {
+                            Console.WriteLine("The comment id is: " + insideComment.CommentId);
+                            Console.WriteLine("The actual comment is: " + insideComment.TheComment);
+                        }
+                        break;
+                    case "5":
+                        Console.WriteLine("Type username");
+                        userlist = userRepo.GetAllUsersByName(Console.ReadLine());
+                        foreach (var eachUser in userlist)
+                        {
+                            Console.WriteLine("The user email is: " + eachUser.Email);
+                            Console.WriteLine("The user password is: " + eachUser.Password);
+                            Console.WriteLine("The user id is: " + eachUser.UserID);
+                            Console.WriteLine("The user name is: " + eachUser.UserName);
+                            Console.WriteLine("");
+                        }
+                        break;
+                    case "6":
+                        Console.WriteLine("Type your Comment");
+                        commentList = commentRepo.GetCommentsByComment(Console.ReadLine());
+                        foreach (var eachComment in commentList)
+                        {
+                            Console.WriteLine("The comment id is: " + eachComment.CommentId);
+                            Console.WriteLine("The actual comment is: " + eachComment.TheComment);
+                            Console.WriteLine("");
+                        }
+                        break;
+                    case "7":
+                        Console.WriteLine("PLease wait for file");
+                        userlist = userRepo.Get();
+                        commentList = commentRepo.Get();
 
-            string path = "TestDirectory";
-            string moveToPath = "../../TestDirectory";
+                        fm.AddInfoToFile("File1.txt", userlist, commentList);
+                        break;
+                }
+            }
 
-            FileManagerClass newManager =
-                new FileManagerClass();
-
-            //newManager.CreateAFile(path);
-
-            //newManager.MoveFile(path, moveToPath);
-
-            newManager.CreateDirectory(path);
-
-            newManager.MoveDirectory(path, moveToPath);
         }
     }
-
 }
-//    }
-//}

@@ -1,10 +1,11 @@
 ﻿using System;
 using DisneyShoppingCart.Models;
+using System.Collections.Generic;
 
 namespace DisneyShoppingCart.Repositories
 {
     public interface IUser_Repository : IMainRepository<Users>
     {
-        public void GetAllUsersByName(string name);
+        public List<Users> GetAllUsersByName(string name);
     }
 }
